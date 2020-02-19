@@ -1,8 +1,9 @@
 import React from 'react';
-import { css } from '@emotion/core';
+import { css } from 'styled-components';
 import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 import Image from 'gatsby-image';
-import ReadLink from '../components/read-link';
+import ReadLink from './read-link';
 
 const PostPreview = ({ post }) => (
   <article
@@ -43,5 +44,9 @@ const PostPreview = ({ post }) => (
     </div>
   </article>
 );
+
+PostPreview.PropTypes = {
+
+}
 
 export default PostPreview;

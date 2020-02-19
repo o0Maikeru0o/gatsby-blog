@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 
@@ -14,7 +14,7 @@ const ImageBackground = styled(BackgroundImage)`
   }
 `;
 
-const TextBox = styled('div')`
+const TextBox = styled.div`
   background-image: linear-gradient(to top, #ddbbffdd 2rem, #ddbbff00);
   display: flex;
   flex-direction: column;
@@ -62,7 +62,9 @@ const Hero = () => {
       <TextBox>
         <h1>Frontend Masters + Gatsby &hearts;</h1>
         <p>
-          Hello NYC! <Link to="/about/">Learn about me &rarr;</Link>
+          Hello NYC!
+          {' '}
+          <Link to="/about/">Learn about me &rarr;</Link>
         </p>
       </TextBox>
     </ImageBackground>

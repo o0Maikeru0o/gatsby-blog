@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { css } from '@emotion/core';
+import { css } from 'styled-components';
 
 const Wave = () => {
   const [waves, setWaves] = useState(0);
@@ -7,6 +7,7 @@ const Wave = () => {
 
   return (
     <button
+      type="button"
       css={css`
         background: rebeccapurple;
         border: none;

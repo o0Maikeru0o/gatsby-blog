@@ -7,12 +7,13 @@ import Insta from '../components/insta';
 
 export default () => {
   const posts = usePosts();
+  console.lot(posts)
   return (
     <>
       <Hero />
       <Layout>
         <h2>Read my blog</h2>
-        {posts.map(post => (
+        {posts.map((post) => (
           <PostPreview key={post.slug} post={post} />
         ))}
         <Insta />

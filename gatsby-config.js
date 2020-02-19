@@ -4,18 +4,18 @@ module.exports = {
     description: 'Developer blog for Michael Nickandros.',
   },
   plugins: [
-    'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
         defaultLayouts: {
           default: require.resolve('./src/components/layout.js'),
         },
-        gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-images' }],
-        plugins: [{ resolve: 'gatsby-remark-images' }],
+        gatsbyRemarkPlugins: ['gatsby-remark-images'],
+        plugins: ['gatsby-remark-images'],
       },
     },
     {
