@@ -4,10 +4,10 @@ module.exports = {
     description: 'Developer blog for Michael Nickandros.',
   },
   plugins: [
-    'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    "gatsby-plugin-theme-ui",
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
