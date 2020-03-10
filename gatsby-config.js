@@ -7,7 +7,13 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    "gatsby-plugin-theme-ui",
+    'gatsby-plugin-theme-ui',
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/gatsby-plugin-theme-ui/typography`,
+      },
+    },
     {
       resolve: 'gatsby-plugin-mdx',
       options: {

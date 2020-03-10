@@ -14,7 +14,9 @@ const Layout = ({ children }) => {
         flexDirection: 'column',
         // set this to `minHeight: '100vh'` for full viewport height
         minHeight: 256,
-      }}>
+        overflow: 'hidden',
+      }}
+    >
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -23,18 +25,21 @@ const Layout = ({ children }) => {
       <Header
         sx={{
           width: '100%',
-        }} />
+        }}
+      />
       <main
         sx={{
           width: '100%',
           flex: '1 1 auto',
-        }}>
+        }}
+      >
         {children}
       </main>
       <footer
         sx={{
           width: '100%',
-        }}>
+        }}
+      >
         Footer
       </footer>
     </div>

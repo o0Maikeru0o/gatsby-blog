@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { Link } from 'gatsby';
-import { jsx } from 'theme-ui'
+import { jsx } from 'theme-ui';
+import NavLink from './nav-link';
 
 const Header = () => (
   <header
@@ -8,36 +8,45 @@ const Header = () => (
       display: 'flex',
       alignItems: 'center',
       variant: 'styles.header',
-    }}>
-    <Link to='/'
+    }}
+  >
+    <NavLink
+      to="/"
       sx={{
         variant: 'styles.navlink',
         p: 2,
-      }}>
+      }}
+    >
       MWN
-  </Link>
+    </NavLink>
     <div sx={{ mx: 'auto' }} />
-    <Link to='/blog'
+    <NavLink
+      to="/blog"
       sx={{
         variant: 'styles.navlink',
         p: 2,
-      }}>
+      }}
+    >
       Blog
-  </Link>
-    <Link to='/about'
+    </NavLink>
+    <NavLink
+      to="/about"
       sx={{
         variant: 'styles.navlink',
         p: 2,
-      }}>
+      }}
+    >
       About
-  </Link>
-    <Link to='/contact'
+    </NavLink>
+    <NavLink
+      to="/contact"
       sx={{
         variant: 'styles.navlink',
         p: 2,
-      }}>
+      }}
+    >
       About
-  </Link>
+    </NavLink>
   </header>
 );
 

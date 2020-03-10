@@ -4,7 +4,6 @@ import { Link } from 'gatsby';
 import Image from 'gatsby-image';
 import { Styled, Flex, Box, jsx } from 'theme-ui';
 
-
 const PostPreview = ({ posts }) => (
   <ul
     sx={{
@@ -12,48 +11,53 @@ const PostPreview = ({ posts }) => (
       m: 0,
       px: 3,
       py: 4,
-    }}>
-    {posts.map(post => (
-      <li key={post.id}
-        sx={{
-          mb: 4,
-        }}>
-        <Flex key={post.id} as="article">
-
-          <Image
-            fluid={post.image.sharp.fluid}
-            alt={post.title}
-            sx={{
-              marginRight: '1rem',
-              width: "100px",
-              height: "100px",
-            }}
-          />
-          <Box>
-            <Styled.h2
+    }}
+  >
+    {posts.map(post => {
+      return (
+        <li
+          key={post.id}
+          sx={{
+            mb: 4,
+          }}
+        >
+          <Flex key={post.id} as="article">
+            <Image
+              fluid={post.featuredImage.sharp.fluid}
+              alt={post.title}
               sx={{
-                m: 0,
-              }}>
-              <Link to={post.slug}
+                marginRight: '1rem',
+                width: '100px',
+                height: '100px',
+              }}
+            />
+            <Box>
+              <Styled.h2
                 sx={{
-                  color: 'inherit',
-                  textDecoration: 'none',
-                  ':hover,:focus': {
-                    color: 'primary',
-                    textDecoration: 'underline',
-                  }
-                }}>
-                {post.title}
-              </Link>
-            </Styled.h2>
-            <small sx={{ fontWeight: 'bold' }}>{post.date}</small>
-            <Styled.p>
-              {post.excerpt}
-            </Styled.p>
-          </Box>
-        </Flex>
-      </li>
-    ))}
+                  m: 0,
+                }}
+              >
+                <Link
+                  to={post.slug}
+                  sx={{
+                    color: 'inherit',
+                    textDecoration: 'none',
+                    ':hover,:focus': {
+                      color: 'primary',
+                      textDecoration: 'underline',
+                    },
+                  }}
+                >
+                  {post.title}
+                </Link>
+              </Styled.h2>
+              <small sx={{ fontWeight: 'bold' }}>{post.date}</small>
+              <Styled.p>{post.excerpt}</Styled.p>
+            </Box>
+          </Flex>
+        </li>
+      );
+    })}
   </ul>
 
   // <article
